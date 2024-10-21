@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Servicios">
+
+    <!-- Encabezado -->
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/regresar"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/regresar"
+            android:contentDescription="regresar"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:srcCompat="@drawable/regresar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contacto"
+            android:textStyle="bold"
+            android:textColor="@color/verde"
+            android:textSize="30sp"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:id="@+id/ads_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ads"
+            android:contentDescription="Publicidad"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+    <!-- Línea de separación entre encabezado y contenido siempre visible -->
+    <View
+        android:id="@+id/separation_line"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:background="@color/verde"
+        app:layout_constraintTop_toBottomOf="@id/header_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Contenido principal con scroll -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/separation_line"
+        app:layout_constraintBottom_toTopOf="@id/footer_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@android:color/white">
+
+            <!-- Sección de texto principal -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="32dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:justificationMode="inter_word"
+                    android:text="Desarrollamos soluciones de software de acuerdo con las necesidades del cliente y su negocio. Cada proyecto es tratado como “llave en mano” pero sin dejar de lado al cliente durante las diferentes etapas permitiendo de esta forma que él esté involucrado desde el inicio hasta la implementación y puesta en marcha de la solución final."
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Plataformas Web -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="32dp">
+
+                <ImageButton
+                    android:id="@+id/imageButtonWeb"
+                    android:layout_width="105dp"
+                    android:layout_height="105dp"
+                    android:layout_marginEnd="16dp"
+                    android:scaleType="fitCenter"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:srcCompat="@drawable/plataformasweb" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="Plataformas Web"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Aplicaciones Móviles -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="32dp">
+
+                <ImageButton
+                    android:id="@+id/imageButtonmoviles"
+                    android:layout_width="105dp"
+                    android:layout_height="105dp"
+                    android:layout_marginEnd="16dp"
+                    android:scaleType="fitCenter"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:srcCompat="@drawable/aplicacionesmoviles" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="Aplicaciones Móviles"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Gestión De Proyectos -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="32dp">
+
+                <ImageButton
+                    android:id="@+id/imageButtonProyectos"
+                    android:layout_width="105dp"
+                    android:layout_height="105dp"
+                    android:layout_marginEnd="16dp"
+                    android:scaleType="fitCenter"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:srcCompat="@drawable/gestiondeproyectos" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="Gestión De Proyectos"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Fábrica De Software -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="32dp">
+
+                <ImageButton
+                    android:id="@+id/imageButtonSoftware"
+                    android:layout_width="105dp"
+                    android:layout_height="105dp"
+                    android:layout_marginEnd="16dp"
+                    android:scaleType="fitCenter"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:srcCompat="@drawable/fabricadesoftware" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="Fábrica De Software"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Footer -->
+    <RelativeLayout
+        android:id="@+id/footer_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Línea de separación fija en la parte superior del footer -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/verde"
+            android:layout_alignParentTop="true" />
+
+        <!-- Botones de imagen con más separación -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true">
+
+            <ImageButton
+                android:id="@+id/imageButton15"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:scaleType="fitCenter"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/nosotros" />
+
+            <ImageButton
+                android:id="@+id/imageButton12"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:scaleType="fitCenter"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/servicios" />
+
+            <ImageButton
+                android:id="@+id/imageButton13"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:scaleType="fitCenter"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/contacto" />
+
+            <ImageButton
+                android:id="@+id/imageButton14"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:scaleType="fitCenter"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/privacidad" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

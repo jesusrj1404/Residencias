@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Nosotros">
+
+    <!-- Encabezado con menú hamburguesa -->
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Menú Hamburguesa (Icono) -->
+        <ImageButton
+            android:id="@+id/volver"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:srcCompat="@drawable/regresar"/>
+
+        <!-- Título del encabezado -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nosotros"
+            android:textStyle="bold"
+            android:textColor="@color/amarillo"
+            android:textSize="30sp"
+            android:layout_centerInParent="true" />
+
+        <!-- Imagen ads.png alineada a la derecha -->
+        <ImageView
+            android:id="@+id/ads_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ads"
+            android:contentDescription="Publicidad"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+    <!-- Línea de separación entre encabezado y contenido -->
+    <View
+        android:id="@+id/separation_line"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:background="@color/amarillo"
+        app:layout_constraintTop_toBottomOf="@id/header_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Contenido principal con scroll -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/separation_line"
+        app:layout_constraintBottom_toTopOf="@id/footer_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@android:color/white">
+
+            <!-- Primer sección: Texto e imagen -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp">
+
+                <!-- Texto -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:textColor="@color/black"
+                    android:text="“Que sea increíble, no lo hace imposible” es el lema de Advanced Digital Solutions (ADS) y es a través de esta frase que la empresa basa su compromiso para el desarrollo de sus objetivos. ADS busca que la conclusión y resultado de cualquier proyecto sea tan increíble que denote el esfuerzo del talento humano, así como el compromiso de la empresa."
+                    android:textSize="14sp"
+                    android:paddingEnd="8dp" />
+
+                <!-- Imagen a la derecha del texto -->
+                <ImageView
+                    android:id="@+id/body_image"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:contentDescription="imagen cuerpo"
+                    android:src="@drawable/nosotros1"
+                    android:layout_marginStart="16dp" />
+            </LinearLayout>
+
+            <!-- Segunda sección: Imagen y texto -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp">
+
+                <ImageView
+                    android:id="@+id/body_2"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:contentDescription="imagen cuerpo"
+                    android:src="@drawable/nosotros2"
+                    android:layout_marginEnd="16dp" />
+
+                <!-- Texto -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="“Advanced Digital Solutions S.A. de C.V.”, conocida como ADS surge a finales del año 2019 como una empresa de base tecnológica enfocada a la creación de soluciones informáticas a la medida que ayuden a la automatización de los diferentes procesos de nuestros clientes."
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:paddingStart="8dp" />
+            </LinearLayout>
+
+            <!-- Tercera sección: Texto e imagen -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp">
+
+                <!-- Texto -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:textColor="@color/black"
+                    android:text="La empresa surge como una idea de negocio entre sus socios fundadores quienes buscaban ofrecer servicios de automatización para la integración de sistemas y procesos a clientes de diversos sectores y giros."
+                    android:textSize="14sp"
+                    android:paddingEnd="8dp" />
+
+                <ImageView
+                    android:id="@+id/body_3"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:contentDescription="imagen cuerpo"
+                    android:src="@drawable/nosotros3"
+                    android:layout_marginStart="16dp" />
+            </LinearLayout>
+
+            <!-- Cuarta sección: Imagen -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp">
+
+                <ImageView
+                    android:id="@+id/body_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:contentDescription="imagen cuerpo"
+                    android:src="@drawable/nosotros4" />
+            </LinearLayout>
+
+            <!-- Quinta sección: Imagen -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp">
+
+                <ImageView
+                    android:id="@+id/body_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:contentDescription="imagen cuerpo"
+                    android:src="@drawable/nosotros5" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Footer -->
+    <RelativeLayout
+        android:id="@+id/footer_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Línea de separación fija en la parte superior del footer -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/amarillo"
+            android:layout_alignParentTop="true" />
+
+        <!-- Botones de imagen con más separación -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true">
+
+            <ImageButton
+                android:id="@+id/imageButton15"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:scaleType="fitCenter"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/nosotros" />
+
+            <ImageButton
+                android:id="@+id/imageButton12"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:scaleType="fitCenter"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/servicios" />
+
+            <ImageButton
+                android:id="@+id/imageButton13"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:scaleType="fitCenter"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/contacto" />
+
+            <ImageButton
+                android:id="@+id/imageButton14"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:scaleType="fitCenter"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/privacidad" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

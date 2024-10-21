@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Privacidad">
+
+    <!-- Encabezado con menú hamburguesa -->
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/regresar"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/regresar"
+            android:contentDescription="regresar"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:srcCompat="@drawable/regresar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aviso de Privacidad"
+            android:textStyle="bold"
+            android:textColor="@color/azul"
+            android:textSize="27dp"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:id="@+id/ads_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ads"
+            android:contentDescription="Publicidad"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+    <!-- Línea de separación entre encabezado y contenido siempre visible -->
+    <View
+        android:id="@+id/separation_line"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:background="@color/azul"
+        app:layout_constraintTop_toBottomOf="@id/header_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Contenido principal con scroll -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@id/footer_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/separation_line">
+
+        <LinearLayout
+            android:id="@+id/content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@android:color/white">
+
+            <!-- Secciones de texto con separación entre párrafos -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="ADDIGIS S. A. S. DE C. V., concepto comercialmente conocido como “ADS” , con domicilio en Alfonso Herrera 67, colonia San Rafael delegación Cuauhtémoc, Ciudad de México, 06470, está comprometido con la protección de sus datos personales, el presente aviso explica la política respecto a la recolección, uso, divulgación y transmisión de ellos, esta información personal será utilizada para proveer los servicios y productos que ha solicitado, informarle sobre cambios en los mismos y evaluar la calidad del servicio que le brindamos."
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="Recolección y uso de la información."
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="En nuestro portal se recaban datos sensibles. Nosotros recibimos y almacenamos información, incluida su información personal, acerca de usted y del uso que da a nuestro servicio. Esta información se puede recopilar de diferentes maneras, entre ellas, cuando la introduce en nuestro sitio web y a partir de interacciones con nuestro servicio. La información personal es información que se puede usar para identificarlo y principalmente para generar una cuenta con usuario y contraseña que les dará acceso a los servicios en el portal www.addigis.com.mx y/o contactarnos con usted. Información no personal significa toda información que no permita establecer una asociación directa con usted. Podemos recopilar, usar, transferir y divulgar información no personal para cualquier propósito. Usted puede elegir no proporcionar información no personal que le sea solicitada, pero la mayoría de la información no personal que solicitamos es necesaria para proporcionar nuestro servicio; la falta de tal información no personal nos impedirá hacerlo."
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="Importante: Nosotros no controlamos las prácticas de privacidad de estas empresas terceras."
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="ADS realiza un seguimiento de todas sus interacciones con nosotros y registramos información relativa a usted y al uso que hace del servicio, que incluye su actividad online, la selección, reseña y calificación de títulos, el historial de pagos y la correspondencia, así como también direcciones de protocolo de Internet, tipos de dispositivo y datos exclusivos del dispositivo, como identificador del dispositivo, sistema operativo, las páginas que consultó, y la actividad relacionada. Utilizamos esta información para determinar el país donde se encuentra y así ofrecerle contenidos locales, para recomendarle páginas e información que consideramos que le pueden agradar, para personalizar el servicio a fin de que se adecue mejor a sus intereses personales, para ayudarnos a responder con mayor rapidez y eficiencia a las consultas, solicitudes y para mejorar o administrar mejor nuestra oferta de servicios, tanto para usted como para otros usuarios.\n\n
+Al utilizar servicios de ADS tendrá la oportunidad de publicar información en foros públicos. Tenga en cuenta que cuando usted publica esta información, la información se hace de conocimiento público y ya no se encuentra protegida por esta política. No somos responsables por el uso por parte de terceros de la información que usted divulgue a través de nuestros foros y servicios públicos.\n\n
+Nosotros nos reservamos el derecho de asociarnos con empresas cuyos productos consideramos pueden resultar de interés a nuestros clientes y prospectos. Junto con dichos socios, podremos enviarle anuncios promocionales y anuncios basados en la web en su nombre, en la medida en que lo permita la ley. Puede enviar un email a unsuscribe@addigis.com.mx y solicitar que se excluya su nombre de los emails o correo postal de marketing."
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="¿Qué datos personales utilizamos para los fines anteriores?"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="Para prestarle los servicios que solicita o contrata con nosotros, requerimos datos personales de identificación: nombre completo, correo electrónico, teléfono, empresa, puesto, y del uso que da a nuestros servicios los cuales se obtienen a partir de los formularios que llena en su registro y de las visitas a nuestro portal www.addigis.com.mx."
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="Divulgacion de Información"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="La empresa ADS, agentes o contratistas que realizan servicios en nuestro nombre y que tiene acceso a su información seguirán prácticas uniformes con las descritas en esta Aviso de privacidad. Ellos nos ofrecen infraestructura y servicios de TI, que personalizan y mejoran nuestras páginas web, que procesan las operaciones con tarjeta de crédito, que brindan atención al cliente, cobran deudas, analizan y mejoran los datos, incluida la información relativa a la interacción de nuestros usuarios con nuestro sitio web y procesan nuestras encuestas de consumo. Nosotros no autorizamos a estas empresas a utilizar ni divulgar su información personal, excepto con el fin de brindar el servicio que les solicitamos.\n\n
+Podemos ofrecer promociones o programas que requieran el intercambio de información con terceros como condición para participar. Podemos asociarnos con empresas que ofrecen incentivos; premios en millas por viajero frecuente cuando se suscribe o utiliza nuestro servicio. Al realizar este tipo de promociones, podremos compartir su nombre y otra información relacionada con la realización del incentivo. Al participar en dichas promociones o programas, implícitamente acepta que compartamos su información.\n\n
+Importante: Nosotros no controlamos las prácticas de privacidad de estas empresas terceras.\n\n
+ADS también se reserva el derecho de divulgar información personal cuando razonablemente consideramos que el acceso, el uso, la preservación o la divulgación de tal información es necesaria para (a) cumplir con cualquier legislación, reglamentación, proceso legal o solicitud gubernamental correspondiente, (b) hacer cumplir términos de uso correspondientes, incluida la investigación de posibles infracciones de ellos, (c) detectar, evitar o abordar actividades ilegales o presuntamente ilegales y cuestiones técnicas o de seguridad, o (d) proteger de daño contra los derechos, la propiedad o la seguridad de ADS, sus usuarios o el público, según lo requiera o permita la ley. En relación con una reorganización, restructuración, fusión, venta, o cualquier otra transferencia de bienes, nos reservamos el derecho de transferir información, incluida la información personal, a condición de que el destinatario se comprometa a respetar su información personal de conformidad con nuestra Aviso de privacidad."
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="Facebook."
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="En el caso de algunos miembros ubicados en determinados países, si usted conecta su cuenta de ADS con Facebook, podremos acceder de manera continua a su información y a la información de sus amigos registrados en Facebook que también tengan una cuenta de Facebook conectada con ADS, a menos que se desconecte. Importaremos, utilizaremos, divulgaremos y conservaremos esta información a fin de personalizar y mejorar el servicio de ADS para usted, para sus amigos y para otras personas. Además, cuando conecte su cuenta de ADS con Facebook, podremos publicar automáticamente su actividad, incluido lo que vio. Sus amigos y todos los que tengan acceso a su información de Facebook verán que es miembro de ADS así como cualquier información acerca del uso del servicio de ADS que se publique, tanto en Facebook como en ADS. También podrá obtener acceso a información similar acerca de sus amigos de Facebook que están conectados con ADS. Importante: Facebook importará, utilizará y conservará esta información. Consulte el Aviso de privacidad de Facebook para obtener más información, incluida la forma en que manejan la información. Puede controlar cómo compartir determinada información mediante la Configuración de parámetros de seguridad de Facebook. Nosotros y Facebook actualizamos y mejoramos esta función de manera continua, por lo que es posible que la información y las funciones disponibles cambien ocasionalmente. Estos cambios pueden ocurrir sin aviso y es posible que no estén descritos aquí ni en los Términos de uso."
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="Vinculos a otros sitios."
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="El sitio web www.addigis.com.mx contiene vínculos a sitios operados por terceros que pueden tener políticas respecto del manejo de información diferente de la nuestra. Si bien hacemos todo lo posible por asociarnos con sitios web de renombre, ADS no se puede hacer responsable por las prácticas de manejo de información ellos. Estos sitios web a los que se accede mediante vínculos tienen sus propias declaraciones de privacidad, avisos y Términos de uso, que le recomendamos leer con atención. Además, es probable que encuentre aplicaciones de terceros que interactúen con el servicio de ADS. Para obtener más información, consulte nuestros Términos de uso."
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="Cookies y otras tecnologías."
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="Cuando usted interactúa con nuestro servicio, nosotros y nuestros proveedores podemos colocar cookies en su sistema. Las cookies son pequeñas unidades de datos que se envían a su navegador desde un servidor web y se almacenan en su sistema a los efectos de registrar datos. Las cookies pueden hacer que Internet sea más útil, ya que almacenan información acerca de sus preferencias en un sistema en particular.\n\n
+Además de las cookies, nosotros y nuestros proveedores de servicio utilizamos una amplia gama de tecnologías, como etiquetas de pixeles (contadores de visitantes), imágenes en formato .GIF transparentes y tecnologías que forman parte de nuestro software de aplicación o de su dispositivo, para registrar información acerca de cómo interactúan los usuarios con nuestro servicio. Estas cookies y tecnologías ayudan a personalizar el servicio para usted y ayudan a asociar sus interacciones con nuestro servicio a otra información dentro de su cuenta. Nos pueden mostrar, páginas populares, tasas de conversión, patrones de visualización, registro de clics e información que puede resultar útil para la mejora, el funcionamiento y la supervisión de nuestro sitio web y de aspectos de nuestro servicio. La sección de Ayuda de la barra de herramientas de la mayoría de los navegadores le indicará cómo evitar que su navegador acepte nuevas cookies, cómo hacer que el navegador le avise cuando reciba una nueva cookie, o cómo desactivar las cookies por completo. Si su navegador está configurado para no aceptar cookies, no podrá recibir la experiencia completa al utilizar el servicio ni el sitio web www.addigis.com.mx."
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="Anuncios que aparecen en sitios de terceros."
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="Nosotros recurrimos a terceros; agencias de publicidad, para que presenten nuestros anuncios. Estas empresas pueden utilizar información acerca de sus visitas a este sitio web y a fin de mostrarle anuncios acerca de bienes y servicios que le pueden resultar de interés."
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="Seguridad"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="ADS toma muy en serio la seguridad de la información y utiliza medidas administrativas, técnicas, físicas y de gestión razonables para proteger su información personal del acceso no autorizado. Utilizamos Secure Sockets Layering (SSL) -un protocolo estándar en la industria en algunas de las transmisiones que nos envía, a fin de cifrar información personal que transmite durante el proceso de registro y de suscripción.\n\n
+Lamentablemente, ningún sistema de seguridad es 100% seguro. Por lo tanto, no podemos garantizar la seguridad de su información y no podemos asumir la responsabilidad ante un acceso inapropiado. Al utilizar nuestro servicio, incluido nuestro sitio web y nuestras interfaces de usuario, o al transmitirnos información por cualquier medio, usted da su consentimiento para que nos comuniquemos con usted en forma electrónica respecto de cuestiones de seguridad, privacidad y administrativas en relación con el uso que hace del servicio de ADS.\n\n
+A fin de facilitarle el acceso a su cuenta y para administrar mejor el servicio de ADS, ADS implementa tecnología que nos permite reconocerlo como titular de la cuenta y darle acceso directo a su cuenta sin solicitarle que vuelva a introducir ninguna contraseña u otra identificación de usuario al volver a ingresar al servicio de ADS. Usted puede optar por no aprovechar esta función en su computadora desmarcando la casilla “Recordarme en esta computadora” cuando inicia sesión en el sitio web.\n\n
+Es su responsabilidad proteger la confidencialidad de la información de acceso a su cuenta y restringir el acceso a la computadora o dispositivo mediante el cual accede a su cuenta de ADS. Si revela su contraseña a cualquier persona o comparte su cuenta o dispositivos con otras personas, debe asumir plena responsabilidad por sus actos. Siempre que sea posible, los usuarios de dispositivos públicos o compartidos deben cerrar sesión al finalizar cada visita. Si vende o devuelve una computadora o un dispositivo que usted utilizaba para ingresar a sus servicios ADS, debe cerrar sesión y desactivar su cuenta antes de hacerlo. Si no cierra sesión o no desactiva su cuenta, los usuarios posteriores podrán acceder a la información de su cuenta."
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="Cambios de la poítica"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="La presente política se podrá modificar a medida que actualizamos y ampliamos nuestros servicios, estos cambios y actualizaciones se harán de su conocimiento en nuestro portal www.addigis.com.mx.\n\n
+Usted acuerda que su aceptación de los Términos de Uso y el Aviso de privacidad posterior a su consentimiento original, así como el uso del sitio web de ADS o el uso continuo de nuestro servicio después de publicar un cambio a esta política implica que acepta dichos cambios y se obliga a respetarlos. Podrá acceder a la última versión de este Aviso de privacidad visitando nuestro sitio web www.addigis.com.mx y haciendo clic en “Aviso de privacidad”. La última versión del presente Aviso de privacidad prevalecerá sobre todas las versiones anteriores."
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="Derechos ARCO (Acceso (A), Rectificación (R), Cancelación (C), Oposición (O) y Revocación del Consentimiento)."
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="Usted puede ejercer sus derechos ARCO así como de oponerse al tratamiento de los mismos para el fin que nos haya otorgado, a través del procedimiento que hemos implementado.\n\n
+1.-Envió de correo electrónico a la cuenta admin@addigis.com.mx. que debe incluir sus datos personales, el correo desde donde envié la solicitud debe ser el mismo con el que se dio de alta en el formulario de registro en www.adsmexico.mx.\n\n
+2.- Para el derecho de ACCESO deberá señalar los datos personales que requiere conocer.\n\n
+3.- Para el derecho de RECTIFICACION de algún dato deberá enviar los datos a cambiar para poder efectuarlo.\n\n
+4.-Para el derecho de CANCELACION y REVOCACION DEL CONSENTIMIENTO, procederá cuando usted no tenga ningún adeudo con ADS, primero tendría que cancelar los servicios o pagar los adeudos que tiene con la empresa.\n\n
+5.-Para el derecho de OPOSICION, deberá especificar el/los dato(s) a los que se solicita oponer. Y el dato personal señalado no debe afectar sus datos de acceso a ADS. ADS le comunicara la viabilidad de su solicitud vía correo electrónico y la ejecución del derecho en los 10 días hábiles siguientes."
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="Transmisión de la información y usuarios internacionales."
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="Como Internet es un entorno global, su uso para recopilar y procesar información implica por necesidad la transmisión de datos de manera internacional. Al contratar los servicios de ADS, acuerda y acepta la transmisión de su información fuera de su país de residencia a cualquier país (incluidos los Estados Unidos) donde tengamos instalaciones o actividades con terceros (incluidos, entre otras cosas, procesadores de pagos, proveedores de servicios de nube u otros servicios de TI, y otras empresas que nos provean servicios). Usted entiende que los países a los que transmitimos información pueden tener un nivel de protección de datos menos integral que el de su país."
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="Como contactarnos"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="Si tiene alguna pregunta respecto de su cuenta, comuníquese con el Servicio al cliente de ADS. Si tiene alguna pregunta respecto al uso de cookies y otras tecnologías, escríbanos a admin@addigis.com.mx o a la siguiente dirección:"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="Advanced Digital Solutions S.C.\n
+Alfonso Herrera 67, Col. San Rafael,\n
+Cuauhtémoc, Ciudad de México, CP. 06470\n
+Teléfono: 55 7924 7746\n
+Nuestro portal: www.addigis.com.mx"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="IFAI."
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="El presente acuerdo cumple con lo dispuesto en la Ley Federal de Protección de Datos Personales en Posesión de Particulares, y los titulares de los datos personales tienen derecho a acudir al IFAI en caso de que consideren que ha sido vulnerado su derecho a la protección de datos personales.\n\n
+Este Aviso de privacidad tiene vigencia a partir del 1° de enero del 2021. Última modificación 1° de mayo del 2021."
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Footer -->
+    <RelativeLayout
+        android:id="@+id/footer_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Línea de separación fija en la parte superior del footer -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/azul"
+            android:layout_alignParentTop="true" />
+
+        <!-- Botones de imagen con más separación -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true">
+
+            <ImageButton
+                android:id="@+id/imageButton15"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:scaleType="fitCenter"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/nosotros" />
+
+            <ImageButton
+                android:id="@+id/imageButton12"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:scaleType="fitCenter"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/servicios" />
+
+            <ImageButton
+                android:id="@+id/imageButton13"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:scaleType="fitCenter"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/contacto" />
+
+            <ImageButton
+                android:id="@+id/imageButton14"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:scaleType="fitCenter"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/privacidad" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

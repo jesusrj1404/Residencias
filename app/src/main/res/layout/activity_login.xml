@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <!-- Contenedor con Scroll -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/footerLayout"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Logo de la aplicación -->
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="320dp"
+                android:layout_height="271dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="1dp"
+                app:srcCompat="@drawable/adslogocolorcompleto" />
+
+            <!-- Campo de correo/username -->
+            <EditText
+                android:id="@+id/editTextTextEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="3dp"
+                android:background="#E5E1E6"
+                android:hint="Correo/Username"
+                android:inputType="textEmailAddress"
+                android:textAlignment="center"
+                android:textColor="#FF000000"
+                android:textColorHint="#FF888888"
+                android:textStyle="italic" />
+
+            <!-- Campo de contraseña -->
+            <EditText
+                android:id="@+id/editTextTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="15dp"
+                android:background="#E5E1E6"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+                android:textAlignment="center"
+                android:textColor="#FF000000"
+                android:textColorHint="#FF888888" />
+
+            <!-- Checkbox de recordar contraseña -->
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="3dp"
+                android:buttonTint="#1A4E8A"
+                android:text="Recordar Contraseña" />
+
+            <!-- Botón de iniciar sesión -->
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="225dp"
+                android:layout_height="53dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="32dp"
+                android:backgroundTint="#1A4E8A"
+                android:text="Iniciar Sesión"
+                android:textColor="@color/white" />
+
+            <!-- Texto de invitación para registrarse -->
+            <TextView
+                android:id="@+id/button6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="32dp"
+                android:text="¿Aún no tienes una cuenta?"
+                android:textColor="@color/black" />
+
+            <!-- Botón de registrarse -->
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#00FFFFFF"
+                android:text="Registrate"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Footer con las imágenes fijas -->
+    <RelativeLayout
+        android:id="@+id/footer_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Línea de separación fija en la parte superior del footer -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/azul"
+            android:layout_alignParentTop="true" />
+
+        <!-- Botones de imagen con más separación -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true">
+
+            <ImageButton
+                android:id="@+id/imageButton15"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:scaleType="fitCenter"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/nosotros" />
+
+            <ImageButton
+                android:id="@+id/imageButton12"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:scaleType="fitCenter"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/servicios" />
+
+            <ImageButton
+                android:id="@+id/imageButton13"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:scaleType="fitCenter"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/contacto" />
+
+            <ImageButton
+                android:id="@+id/imageButton14"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:scaleType="fitCenter"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/privacidad" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
